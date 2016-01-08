@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "mozjpeg"
+exit 0
