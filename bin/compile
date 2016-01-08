@@ -4,6 +4,7 @@ build_dir=$1
 working_dir=`pwd`
 
 chmod -R +x $working_dir/vendor/bin/
+mkdir -p $build_dir/vendor
 cp $working_dir/vendor $build_dir/vendor
 
 mkdir -p $build_dir/.profile.d
