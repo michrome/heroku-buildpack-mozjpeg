@@ -1,7 +1,11 @@
 #!/bin/sh
 
+build_dir=$1
 working_dir=`pwd`
 
-chmod +x $working_dir/vendor/bin/cjpeg
-export PATH=$PATH:$working_dir/vendor/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$working_dir/vendor/lib
+chmod -R +x $working_dir/vendor/bin/
+cp $working_dir/vendor $build_dir/vendor
+
+mkdir -p $build_dir/.profile.d
+echo 'PATH=$PATH:$build_dir/vendor/bin' > $build_dir/.profile.d/mozjpeg.sh
+echo 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$build_dir/vendor/lib' > $build_dir/.profile.d/mozjpeg.sh
