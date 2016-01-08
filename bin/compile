@@ -8,5 +8,5 @@ mkdir -p $build_dir/vendor
 cp -R $working_dir/vendor/* $build_dir/vendor/
 
 mkdir -p $build_dir/.profile.d
-echo 'PATH=$PATH:$build_dir/vendor/bin' > $build_dir/.profile.d/mozjpeg.sh
-echo 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$build_dir/vendor/lib' > $build_dir/.profile.d/mozjpeg.sh
+echo 'PATH=$PATH:$HOME/vendor/bin' > $build_dir/.profile.d/mozjpeg.sh
+echo 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/vendor/lib' >> $build_dir/.profile.d/mozjpeg.sh
